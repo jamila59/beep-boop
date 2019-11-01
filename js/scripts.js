@@ -1,7 +1,7 @@
-// front-end
+
 var newstr = [];
 
-// back-end
+// useer-interface
 
 $(document).ready(function() {
   $("#formOne").submit(function(event){
@@ -9,12 +9,19 @@ $(document).ready(function() {
     var input = parseInt($("input#numbers").val());
     var inputToString = input.toString();
 
-    for (var i = 0; i <= inputToString.length; i++){
+// back-end
+
+    for (var i = 0; i < inputToString.length; i++){
       if(inputToString.includes(3)) {
-        newstr.splice(i,1,"I'm sorry Dave, I'm afraid I can't do that");
-        console.log(newstr);
-        $(".results").text(newstr);
-      };
-    };
-  });
-});
+        $(".results").append("Im sorry, Dave. I'm afraid I can't do that.");
+      } else if (inputToString.includes(2)) {
+          newstr.splice(i,1, "Boop! ");
+        } else if (inputToString.includes(1)) {
+          newstr.splice(i,1, "Beep!");
+        } else {
+          newstr.push(input);
+        }
+        }
+        $(".results").append(newstr);
+      });
+    });
