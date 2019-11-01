@@ -1,5 +1,5 @@
 
-var newstr = [];
+var series = [];
 
 // useer-interface
 
@@ -11,17 +11,24 @@ $(document).ready(function() {
 
 // back-end
 
+
+
+
+
+
     for (var i = 0; i < inputToString.length; i++){
       if(inputToString.includes(3)) {
-        $(".results").append("Im sorry, Dave. I'm afraid I can't do that.");
+        series.splice(i,1," I'm sorry Dave, I'm afraid I can't do that." );;
       } else if (inputToString.includes(2)) {
-          newstr.splice(i,1, "Boop! ");
+        $(".results").append("Beep!");
         } else if (inputToString.includes(1)) {
-          newstr.splice(i,1, "Beep!");
+        $(".results").append(i + "Boop!");
         } else {
-          newstr.push(input);
+          series.push(input);
         }
         }
-        $(".results").append(newstr);
+        $(".results").append(series);
       });
     });
+
+// });
