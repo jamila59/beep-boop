@@ -1,6 +1,4 @@
 
-var series = [];
-
 // useer-interface
 
 $(document).ready(function() {
@@ -9,26 +7,25 @@ $(document).ready(function() {
     var input = parseInt($("input#numbers").val());
     var inputToString = input.toString();
 
+  });
+});
+
+
 // back-end
+  var newStr = [];
+  var speak = function(number) {
+  for (var i=0; i<= inputToString; i++) {
+  newStr.push(speak(i));
+      };
 
-
-
-
-
-
-    for (var i = 0; i < inputToString.length; i++){
-      if(inputToString.includes(3)) {
-        series.splice(i,1," I'm sorry Dave, I'm afraid I can't do that." );;
-      } else if (inputToString.includes(2)) {
-        $(".results").append("Beep!");
-        } else if (inputToString.includes(1)) {
-        $(".results").append(i + "Boop!");
-        } else {
-          series.push(input);
-        }
-        }
-        $(".results").append(series);
-      });
-    });
-
-// });
+      if (number.toString().includes(3)==true) {
+         return "I'm sorry, Dave, I'm afraid I can't do that.";
+       } else if (number.toString().includes(2)==true) {
+         return "Boop!";
+       } else if (number.toString().includes(1)==true) {
+         return "Beep!";
+       } else {
+       return number.toString();
+        //  return " " + number.toString();
+        };
+     };
