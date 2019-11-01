@@ -8,7 +8,7 @@ $(document).ready(function(){
     var input=$("#input").val();
     for (var i=0; i<=input; i++) {
      result.push(speak(i));
-     $("#result").text(result);
+     $("#result").append("<b>" + i + "</b>" + "<br>" + result + "<br>");
     };
   });
 });
