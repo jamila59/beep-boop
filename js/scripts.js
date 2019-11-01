@@ -1,7 +1,6 @@
 // global variable
 var result = [];
 // front-end
-
 $(document).ready(function(){
    $("#formOne").submit(function(event){
     event.preventDefault();
@@ -12,7 +11,6 @@ $(document).ready(function(){
     };
   });
 });
-
 // back-end
     var speak = function(integer) {
       if (integer.toString().includes(3)==true) {
